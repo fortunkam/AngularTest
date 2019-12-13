@@ -1,0 +1,27 @@
+<h1>Show User</h1>
+
+<p>This data is fetched from the graph API.</p>
+
+<div *ngIf="!userData">
+    <em>Loading...</em>
+</div>
+
+<div *ngIf="userData">
+        <p aria-live="polite">Auth Token: <strong>{{ userData.access_token }}</strong></p>
+        <p aria-live="polite">Email: <strong>{{ userData.user_id }}</strong></p>
+        <table class='table table-striped' aria-labelledby="tableLabel">
+                <thead>
+                  <tr>
+                    <th>Claim Name</th>
+                    <th>Claim Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let claim of userData.user_claims">
+                    <td>{{ claim.typ }}</td>
+                    <td>{{ claim.val }}</td>
+                  </tr>
+                </tbody>
+              </table>
+</div>
+

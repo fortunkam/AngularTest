@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/44e1dac0-0651-4835-8781-ee7b6e6f238f/resourceGroups/appservice/providers/Microsoft.Web/sites/angular-auth",
+    "appService.deploySubpath": "bin\\Debug\\netcoreapp3.1\\publish"
+}
